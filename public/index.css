@@ -3,3 +3,8 @@ body {
     padding: 15px;
     background-color: rgb(66, 66, 66);
 }
+
+* {
+    color: whitesmoke;
+    font-family: 'Gill Sans MT';
+}

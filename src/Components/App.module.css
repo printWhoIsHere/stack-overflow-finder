@@ -1,3 +1,65 @@
 .AppWrapper {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Start_page {
+    width: 65%;
+    height: fit-content;
+    margin-top: 1.5em;
+    background-color: rgb(50, 50, 50);
+    border: 1px solid rgb(36, 36, 36);
+    border-radius: .5em;
+    box-shadow: -5px 5px 5px rgb(36, 36, 36);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-size: 30px;
+    margin: 25px 0 5px 0;
+}
+
+.h2 {
+    font-size: 20px;
+}
+
+.search_field {
+    width: 15em;
+    height: 2em;
+    color: white;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    font-family: 'Gill Sans MT';
+}
+
+.search_field :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.search_button {
+    width: 5em;
+    height: 1.5em;
+    font-size: 25px;
+    background-color: inherit;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: -3px 3px 10px black;
+    margin: 20px 0 20px 0;
+}
+
+.search_button:hover {
+    background-color: rgb(36, 36, 36);
+}
+
+.search_button:active {
+    box-shadow: none;
+    margin: 23px 3px 17px 0;
 }

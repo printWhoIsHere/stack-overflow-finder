@@ -1,9 +1,20 @@
 .Wrapper {
     width: 75%;
     height: 4em;
-    margin: 0 auto;
     background-color: rgb(50, 50, 50);
-    border: 1px solid black;
+    border: 1px solid rgb(36, 36, 36);
+    box-shadow: -5px 5px 5px rgb(36, 36, 36);
     border-radius: .5em;
-    box-shadow: -5px 5px 10px rgb(36, 36, 36);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.logo:hover {
+    color: orange;
+    transition: all 1s;
 }

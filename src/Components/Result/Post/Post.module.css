@@ -1,0 +1,76 @@
+* {
+    text-decoration: none;
+}
+
+.Post_wrapper {
+    width: 15em;
+    height: 15em;
+    background-color: rgb(36, 36, 36);
+    box-shadow: -5px 5px 5px rgb(20, 20, 20);
+    border-radius: .4em;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Post_wrapper:hover {
+    background-color: rgb(45, 45, 45);
+}
+
+.Post_author {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 10px;
+}
+
+.Author_avatar {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.Author_name {
+    font-size: 25px;
+    margin-left: .6em;
+    cursor: pointer;
+}
+
+.Author_name:hover {
+    color: rgb(147, 129, 246);
+}
+
+.Post_title {
+    margin: 20px 0 30px 0;
+    font-size: 20px;
+    align-self: center;
+}
+
+.Post_title > a:hover {
+    color: rgb(147, 129, 246);
+}
+
+.Post_answer_count {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.Post_answer_count > a:hover {
+    color: rgb(147, 129, 246);
+}
+
+.Post_tags {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Post_tags > div {
+    margin-left: 5px;
+}
+
+.Post_tag:hover {
+    color: rgb(147, 129, 246);
+    cursor: pointer;
+}

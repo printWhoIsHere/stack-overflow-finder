@@ -1,0 +1,22 @@
+.Start_page_wrapper {
+    width: 65%;
+    height: fit-content;
+    margin-top: 1.5em;
+    background-color: rgb(50, 50, 50);
+    border: 1px solid rgb(36, 36, 36);
+    border-radius: .5em;
+    box-shadow: -5px 5px 5px rgb(36, 36, 36);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-size: 30px;
+    margin: 25px 0 5px 0;
+}
+
+.h2 {
+    font-size: 20px;
+}

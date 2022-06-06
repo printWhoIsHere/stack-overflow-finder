@@ -19,16 +19,34 @@ const Result = ({searchValue}: any) => {
         profile_image: '',
         display_name: 'Alex'
       },
-      title: 'postpostpost',
+      title: 'Первое название',
       answer_count: 6,
-      tags: ['me', 'you', 'tags', 'tags','tags','tags','tags','tags','tags']
+      tags: ['me', 'you', 'tags']
     },
     {
       owner: {
         profile_image: '',
-        display_name: 'Alex'
+        display_name: 'Великий маг'
       },
-      title: 'postpostpost',
+      title: 'Второе название',
+      answer_count: 6,
+      tags: ['me', 'you', 'tags']
+    },
+    {
+      owner: {
+        profile_image: '',
+        display_name: 'Древо "Эгдрасиль"'
+      },
+      title: 'Третье название',
+      answer_count: 6,
+      tags: ['me', 'you', 'tags']
+    },
+    {
+      owner: {
+        profile_image: '',
+        display_name: 'Стрёмный ник'
+      },
+      title: 'Мне надоело',
       answer_count: 6,
       tags: ['me', 'you', 'tags']
     },
@@ -37,7 +55,7 @@ const Result = ({searchValue}: any) => {
         profile_image: '',
         display_name: 'Alex'
       },
-      title: 'postpostpost',
+      title: 'Я устал и хочу кофе',
       answer_count: 6,
       tags: ['me', 'you', 'tags']
     },
@@ -46,25 +64,7 @@ const Result = ({searchValue}: any) => {
         profile_image: '',
         display_name: 'Alex'
       },
-      title: 'postpostpost',
-      answer_count: 6,
-      tags: ['me', 'you', 'tags']
-    },
-    {
-      owner: {
-        profile_image: '',
-        display_name: 'Alex'
-      },
-      title: 'postpostpost',
-      answer_count: 6,
-      tags: ['me', 'you', 'tags']
-    },
-    {
-      owner: {
-        profile_image: '',
-        display_name: 'Alex'
-      },
-      title: 'postpostpost',
+      title: 'Пожалуйста, прекратите это',
       answer_count: 6,
       tags: ['me', 'you', 'tags']
     }

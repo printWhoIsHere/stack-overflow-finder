@@ -19,9 +19,7 @@
 
 .Post_author {
     display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 10px;
+    width: 16em;
 }
 
 .Author_avatar {
@@ -35,6 +33,7 @@
     font-size: 25px;
     margin-left: .6em;
     cursor: pointer;
+    align-self: center;
 }
 
 .Author_name:hover {

@@ -5,19 +5,19 @@
 }
 
 .Header_wrapper {
-    width: 75%;
-    height: 4em;
+    width: 75vw;
+    height: fit-content;
     background-color: rgb(50, 50, 50);
     border: 1px solid rgb(36, 36, 36);
     box-shadow: -5px 5px 5px rgb(36, 36, 36);
-    border-radius: .5em;
+    /* border-radius: .5em; */
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 2vw;
     text-decoration: none;
 }
 
@@ -30,13 +30,13 @@
 }
 
 .search_field {
-    width: 15em;
-    height: 2em;
+    width: 18vw;
+    height: 5vh;
     color: white;
     background-color: inherit;
     border: none;
-    border-bottom: 1px solid white;
-    font-size: 20px;
+    border-bottom: 1px solid whitesmoke;
+    font-size: 1.5vw;
     font-family: 'Gill Sans MT';
 }
 
@@ -46,15 +46,15 @@
 }
 
 .search_button {
-    width: 5em;
+    width: 9vw;
     height: 1.5em;
-    font-size: 25px;
+    font-size: 1.75vw;
     background-color: inherit;
     border: 1px solid white;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: -3px 3px 10px black;
-    margin: 0 0 0 25px;
+    margin: 10px 0 10px 25px;
 }
 
 .search_button:hover {

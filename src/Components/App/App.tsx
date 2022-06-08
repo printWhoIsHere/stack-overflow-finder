@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div className={Style.AppWrapper}>
-      <header className={Style.Header_wrapper}>
+      <div className={Style.Header_wrapper}>
         <Link to='/' className={Style.logo}>StackOverflow - Finder</Link>
         <div>
           <input className={Style.search_field} type='text' placeholder='Введите для поиска' onChange={labelChange} value={labelValue}/>
@@ -23,7 +23,7 @@ const App = () => {
             </button> 
           </Link>
         </div>
-      </header>
+      </div>
       
       <Routes>
         <Route path='/' element={<StartPage />} />

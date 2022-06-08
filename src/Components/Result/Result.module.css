@@ -1,5 +1,5 @@
 .Result_page_wrapper {
-    width: 65%;
+    width: 55vw;
     height: fit-content;
     margin-top: 1.5em;
     background-color: rgb(50, 50, 50);
@@ -8,10 +8,10 @@
     box-shadow: -5px 5px 5px rgb(36, 36, 36);
     padding: 15px;
 
-    display: flex;
-    flex-wrap: wrap;
-}
+    display: grid;
+    grid-template-areas: 'a a a';
+    row-gap: 1vh;
+    column-gap: 1vw;
 
-.Result_page_wrapper > div {
-    margin: 10px 0 10px 30px;
+    transition: .5s;
 }

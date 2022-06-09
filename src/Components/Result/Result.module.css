@@ -1,5 +1,5 @@
 .Result_page_wrapper {
-    width: 55vw;
+    width: 50vw;
     height: fit-content;
     margin-top: 1.5em;
     background-color: rgb(50, 50, 50);
@@ -12,6 +12,21 @@
     grid-template-areas: 'a a a';
     row-gap: 1vh;
     column-gap: 1vw;
+    column-width: 1vw;
 
     transition: .5s;
+}
+
+.Loader {
+    width: 50vw;
+    text-align: center;
+    font-size: 3vw;
+}
+
+/* .Adaptive_wrapper {
+    width: 100%;
+} */
+
+.Adaptive_wrapper {
+    display: flex;
 }

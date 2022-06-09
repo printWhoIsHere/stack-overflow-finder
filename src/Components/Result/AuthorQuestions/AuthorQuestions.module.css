@@ -1,11 +1,12 @@
 .Author_questions_wrapper {
-    width: 55vw;
+    width: 40vw;
     height: fit-content;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: .3em;
     box-shadow: -5px 5px 5px rgb(36, 36, 36);
     display: flex;
+    margin: 1.5em 0 0 3em;
 }
 
 .Question_post {

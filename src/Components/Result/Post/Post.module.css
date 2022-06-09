@@ -34,7 +34,7 @@
     background-color: white;
 }
 
-.Author_name {
+.Author_name > div {
     width: 8vw;
     height: fit-content;
     word-break: break-all;
@@ -44,7 +44,7 @@
     align-self: center;
 }
 
-.Author_name:hover {
+.Author_name > div:hover {
     color: rgb(147, 129, 246);
 }
 
@@ -72,10 +72,9 @@
 }
 
 .Post_tags {
-    font-size: 1.2vw;
+    font-size: 1vw;
     display: flex;
     flex-direction: row;
-    margin-bottom: 3vh;
 
     width: 13vw;
     height: fit-content;
@@ -84,15 +83,15 @@
 .Post_tags > ul {
     width: 10vw;
     padding: 0;
-    margin: 0 0 0 5px;
-    word-break:break-all;
+    margin: 0 0 0 10px;
+    word-break: break-all;
     text-align: left;
     display: inline;
 }
 
 .Post_tags > ul > li {
     display: inline;
-    margin-right: 5px;
+    margin-right: 7px;
     padding: 0;
 }
 

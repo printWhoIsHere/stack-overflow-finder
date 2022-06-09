@@ -1,0 +1,44 @@
+.Post_info_wrapper {
+    width: 65vw;
+    height: fit-content;
+    margin-top: 1.5em;
+    background-color: rgb(50, 50, 50);
+    border: 1px solid rgb(36, 36, 36);
+    border-radius: .5em;
+    box-shadow: -5px 5px 5px rgb(36, 36, 36);
+    padding: 15px;
+
+    display: grid;
+    grid-template-areas: 'a a a a a';
+    row-gap: 4vh;
+}
+
+.Answer {
+    width: 9vw;
+    height: 11vw;
+    background-color: rgb(36, 36, 36);
+    grid-area: 'a';
+    text-align: center;
+    padding: 1vh;
+    margin: 1vh auto;
+
+    border-radius: .3em;
+    box-shadow: 0 0 10px black;
+
+    overflow: hidden;
+}
+
+.Answer:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.p1 {
+    margin: 0;
+    font-size: 1vw;
+}
+
+.Loader {
+    width: 65vw;
+    text-align: center;
+    font-size: 3vw;
+}

@@ -1,52 +1,31 @@
+import { useEvent } from "effector-react";
 import { Link } from "react-router-dom";
+import { showAuthorQuestions as authorQuestions, showPopularTags as popularTags } from "../../../Stores/StateStore";
 import Style from "./Post.module.css";
 
-const Post = ({ post }: any) => {
-  const questions = [
-    {
-      title: 'Вопрос 1',
-      id: 1,
-      link: '/'
-    },
-    {
-      title: 'Вопрос 2',
-      id: 2,
-      link: '/'
-    },
-    {
-      title: 'Вопрос 3',
-      id: 3,
-      link: '/'
-    },
-    {
-      title: 'Вопрос 4',
-      id: 4,
-      link: '/'
-    },
-    {
-      title: 'Вопрос 5',
-      id: 5,
-      link: '/'
-    }
-  ]
+const Post = ({ post, forceUpdate, setUserId }: any) => {
+  const showAuthorQuestions = useEvent(authorQuestions);
+  const showPopularTags = useEvent(popularTags);
 
   return (
-    <div className={Style.Post_wrapper} key={post?.id}>
-      <div className={Style.Post_author}>
+    <div className={Style.Post_wrapper} key={post?.id} >
+      <div className={Style.Post_author} onClick={() => setUserId(post?.owner.user_id)}>
         <div className={Style.Author_avatar}><img src={post?.owner.profile_image} alt=''/></div>
-        <div className={Style.Author_name} >
+        <div className={Style.Author_name} onClick={forceUpdate}>
+          <div onClick={showAuthorQuestions}>
             {post?.owner.display_name}
+          </div>
         </div>
       </div>
       
       <div className={Style.Post_title}>
-        <Link to='/' >
+        <Link to='/post-info' >
           {post?.title}
         </Link>
       </div>
       
       <div className={Style.Post_answer_count}>
-        <Link to='/' >
+        <Link to='/post-info' >
         {
           post?.answer_count === 0 ? 'Нет ответов' :
             post?.answer_count === 1 ? `${post?.answer_count} ответ` : 
@@ -58,9 +37,9 @@ const Post = ({ post }: any) => {
       
       <div className={Style.Post_tags}>
         Теги:
-          <ul>
+          <ul onClick={forceUpdate}>
             {post?.tags?.map((tag: any) => (
-              <li className={Style.Post_tag} >
+              <li className={Style.Post_tag} onClick={showPopularTags} >
                 {tag}
               </li>
             ))}

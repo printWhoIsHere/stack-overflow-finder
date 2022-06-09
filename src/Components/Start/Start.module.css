@@ -2,24 +2,24 @@
     width: 65vw;
     height: fit-content;
     margin-top: 1.5em;
-    background-color: rgb(50, 50, 50);
-    border: 1px solid rgb(36, 36, 36);
+    background-color: rgba(50, 50, 50, 0.8);
+    border: 1px solid rgba(36, 36, 36, 0.5);
+    box-shadow: -5px 5px 5px rgb(36, 36, 36, 0.5);
     border-radius: .5em;
-    box-shadow: -5px 5px 5px rgb(36, 36, 36);
     padding: 10px;
     text-align: center;
 
-    transition: .5s;
+    transition: .3s;
 }
 
 .h1 {
     font-size: 2vw;
     margin: 3vh auto;
-    transition: .5s;
+    transition: .3s;
 }
 
 .h2 {
     margin: 2vh auto;
     font-size: 1vw;
-    transition: .5s;
+    transition: .3s;
 }

@@ -19,16 +19,17 @@ const Result = ({searchValue}: any) => {
   const [tag, setTag] = useState('');
   
   useEffect(() => {
-    getSearchDataFx(searchValue).finally(() => {
+    getSearchDataFx(searchValue).then(() => {
       if (searchResults.items) {
-        setIsDone(true);
         setIsLoaded(true);
+        setIsDone(true);
       }
       else {
         setIsLoaded(true);
+        setIsDone(false);
       }
-    });
-  }, []);
+    })
+  }, [forceUpdate]);
 
   return (
     <div className={Style.Adaptive_wrapper}>
@@ -42,7 +43,7 @@ const Result = ({searchValue}: any) => {
                 setUserId={setUserId}
                 setTag={setTag}/>
               </div> 
-              )) : <ErrorMessage reload={forceUpdate}/>}
+              )) : <ErrorMessage forceUpdate={forceUpdate}/>}
       </div>
       {states?.isActiveAuthorQuestions ? <AuthorQuestions userId={userId}/> : states?.isActivePopularTags ? <PopularTags tag={tag}/> : null}
     </div>

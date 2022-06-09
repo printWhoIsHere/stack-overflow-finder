@@ -2,10 +2,10 @@
     width: 50vw;
     height: fit-content;
     margin-top: 1.5em;
-    background-color: rgb(50, 50, 50);
-    border: 1px solid rgb(36, 36, 36);
+    background-color: rgba(50, 50, 50, 0.8);
+    border: 1px solid rgb(36, 36, 36, 0.5);
     border-radius: .5em;
-    box-shadow: -5px 5px 5px rgb(36, 36, 36);
+    box-shadow: -5px 5px 5px rgb(36, 36, 36, 0.5);
     padding: 15px;
 
     display: grid;
@@ -14,7 +14,7 @@
     column-gap: 1vw;
     column-width: 1vw;
 
-    transition: .5s;
+    transition: .3s;
 }
 
 .Adaptive_wrapper {

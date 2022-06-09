@@ -13,7 +13,7 @@
     grid-area: 'a';
     margin: 1vh auto 1vh auto;
 
-    transition: .5s;
+    transition: .3s;
 }
 
 .Post_wrapper:hover {

@@ -11,6 +11,8 @@
     display: grid;
     grid-template-areas: 'a a a a a';
     row-gap: 4vh;
+
+    transition: .5s;
 }
 
 .Answer {

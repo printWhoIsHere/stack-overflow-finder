@@ -7,6 +7,8 @@
     box-shadow: -5px 5px 5px rgb(36, 36, 36);
     display: flex;
     margin: 1.5em 0 0 3em;
+
+    transition: .5s;
 }
 
 .Question_post {

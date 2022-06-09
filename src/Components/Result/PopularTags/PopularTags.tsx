@@ -1,18 +1,20 @@
 import { useStore } from 'effector-react';
 import { useEffect } from 'react';
-import { $popularTags, getPopularTagsFx } from '../../../Stores/PopularTagsStore';
+import { $popularTagsStore, getPopularTagsFx } from '../../../Stores/MainStore';
 import Style from './PopularTags.module.css';
 
 const PopularTags = ({ tag }: any) => {
-    const popularTags = useStore($popularTags);
-    useEffect(() => {
-      getPopularTagsFx(`http://api.stackexchange.com/2.3/tags/${tag}/top-answerers`);
-    }, [])
-  
-    return (
-        <div className={Style.Popular_tags_wrapper}>
-        </div>
-    );
+  const popularTags = useStore($popularTagsStore);
+  useEffect(() => {
+    getPopularTagsFx(tag);
+  }, [popularTags.items.length])
+
+  return (
+    <div className={Style.Popular_tags_wrapper}>
+    </div>
+  );
 };
 
 export default PopularTags;
+
+// Компонент для отображения вопросов по тегам

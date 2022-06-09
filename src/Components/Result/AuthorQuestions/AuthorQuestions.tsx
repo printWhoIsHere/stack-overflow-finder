@@ -1,15 +1,14 @@
 import { useStore } from 'effector-react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { $authorQuestions, getQuestionsFx } from '../../../Stores/AuthorQuestionsStore';
+import { $authorQuestionsStore, getAuthorQuestionsFx } from '../../../Stores/MainStore';
 import Style from './AuthorQuestions.module.css';
 
 const AuthorQuestions = ({ userId }: any) =>  {
-  const questions = useStore($authorQuestions);
+  const authorQuestions = useStore($authorQuestionsStore);
   useEffect(() => {
-    getQuestionsFx(`http://api.stackexchange.com/2.3/users/${userId}/questions?site=stackoverflow`);
-    console.log(questions)
-  }, [])
+    getAuthorQuestionsFx(userId);
+  }, [authorQuestions.items.length])
 
   return (
     <div className={Style.Author_questions_wrapper}>
@@ -27,3 +26,5 @@ const AuthorQuestions = ({ userId }: any) =>  {
 }
 
 export default AuthorQuestions;
+
+// Компонент для отображения популярных вопросов автора

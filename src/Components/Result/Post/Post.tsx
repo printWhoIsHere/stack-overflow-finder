@@ -10,7 +10,7 @@ const Post = ({ post, forceUpdate, setUserId }: any) => {
   return (
     <div className={Style.Post_wrapper} key={post?.id} >
       <div className={Style.Post_author} onClick={() => setUserId(post?.owner.user_id)}>
-        <div className={Style.Author_avatar}><img src={post?.owner.profile_image} alt=''/></div>
+        <div className={Style.Author_avatar}><img src={post?.owner.profile_image} /></div>
         <div className={Style.Author_name} onClick={forceUpdate}>
           <div onClick={showAuthorQuestions}>
             {post?.owner.display_name}
@@ -50,3 +50,5 @@ const Post = ({ post, forceUpdate, setUserId }: any) => {
 };
 
 export default Post;
+
+// Комопнент для рендера каждого отдельного поста

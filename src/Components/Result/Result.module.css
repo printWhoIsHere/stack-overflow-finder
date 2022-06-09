@@ -17,16 +17,6 @@
     transition: .5s;
 }
 
-.Loader {
-    width: 50vw;
-    text-align: center;
-    font-size: 3vw;
-}
-
-/* .Adaptive_wrapper {
-    width: 100%;
-} */
-
 .Adaptive_wrapper {
     display: flex;
 }

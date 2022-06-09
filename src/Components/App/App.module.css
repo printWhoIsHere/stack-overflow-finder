@@ -14,11 +14,14 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    transition: .5s;
 }
 
 .logo {
     font-size: 2vw;
     text-decoration: none;
+    transition: .5s;
 }
 
 .logo:hover {
@@ -38,6 +41,8 @@
     border-bottom: 1px solid whitesmoke;
     font-size: 1.5vw;
     font-family: 'Gill Sans MT';
+
+    transition: .5s;
 }
 
 .search_field :active, :hover, :focus {
@@ -53,8 +58,9 @@
     border: 1px solid white;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: -3px 3px 10px black;
     margin: 10px 0 10px 25px;
+
+    transition: .5s;
 }
 
 .search_button:hover {
@@ -65,5 +71,7 @@
     background-color: whitesmoke;
     border: 1px solid rgb(36, 36, 36);
     color: rgb(36, 36, 36);
+
+    transition: .2s;
 }
 

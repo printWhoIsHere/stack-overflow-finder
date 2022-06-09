@@ -16,6 +16,7 @@ const Result = ({searchValue}: any) => {
   const [isDone, setIsDone] = useState(false);
   const [, forceUpdate] = useState();
   const [userId, setUserId] = useState(0);
+  const [tag, setTag] = useState('');
   
   useEffect(() => {
     getSearchDataFx(searchValue).finally(() => {
@@ -38,11 +39,12 @@ const Result = ({searchValue}: any) => {
               <Post 
                 post={post} 
                 forceUpdate={forceUpdate}
-                setUserId={setUserId}/>
+                setUserId={setUserId}
+                setTag={setTag}/>
               </div> 
               )) : <ErrorMessage reload={forceUpdate}/>}
       </div>
-      {states?.isActiveAuthorQuestions ? <AuthorQuestions userId={userId}/> : states?.isActivePopularTags ? <PopularTags /> : null}
+      {states?.isActiveAuthorQuestions ? <AuthorQuestions userId={userId}/> : states?.isActivePopularTags ? <PopularTags tag={tag}/> : null}
     </div>
   )
 };

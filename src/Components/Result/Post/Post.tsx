@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { showAuthorQuestions as authorQuestions, showPopularTags as popularTags } from "../../../Stores/StateStore";
 import Style from "./Post.module.css";
 
-const Post = ({ post, forceUpdate, setUserId }: any) => {
+const Post = ({ post, forceUpdate, setUserId, setCurrentTag }: any) => {
   const showAuthorQuestions = useEvent(authorQuestions);
   const showPopularTags = useEvent(popularTags);
 
@@ -35,11 +35,11 @@ const Post = ({ post, forceUpdate, setUserId }: any) => {
         </Link>
       </div>
       
-      <div className={Style.Post_tags}>
+      <div className={Style.Post_tags} onClick={forceUpdate}>
         Теги:
-          <ul onClick={forceUpdate}>
+          <ul onClick={showPopularTags}>
             {post?.tags?.map((tag: any) => (
-              <li className={Style.Post_tag} onClick={showPopularTags} >
+              <li className={Style.Post_tag} onClick={setCurrentTag(tag)} >
                 {tag}
               </li>
             ))}

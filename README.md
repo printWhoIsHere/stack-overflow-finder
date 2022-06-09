@@ -1,2 +1,8 @@
-# StackOverflowFinder
-Учебный проект на React, effector и TypeScript для поиска ответов со StackOverflow
+* Для запуска проекта переходим в ветку master 
+    - git checkout master (Если вы находились в другой)
+
+* Далее скачиваем все нужные зависимости
+    - yarn
+
+* Запускаем проект на локальном сервере
+    - yarn start

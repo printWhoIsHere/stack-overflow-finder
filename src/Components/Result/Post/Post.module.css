@@ -1,0 +1,101 @@
+* {
+    text-decoration: none;
+}
+
+.Post_wrapper {
+    width: 13vw;
+    background-color: rgb(45, 45, 45);
+    box-shadow: -5px 5px 5px rgb(20, 20, 20);
+    border-radius: .4em;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    grid-area: 'a';
+    margin: 1vh auto 1vh auto;
+
+    transition: .3s;
+}
+
+.Post_wrapper:hover {
+    background-color: rgb(55, 55, 55);
+    border: 3px solid whitesmoke;
+}
+
+.Post_author {
+    display: flex;
+    width: 15vw;
+    margin-bottom: 3vh;
+}
+
+.Author_avatar > img {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 1em;
+    background-color: white;
+}
+
+.Author_name > div {
+    width: 8vw;
+    height: fit-content;
+    word-break: break-all;
+    font-size: 1.5vw;
+    margin-left: .6em;
+    cursor: pointer;
+    align-self: center;
+}
+
+.Author_name > div:hover {
+    color: rgb(147, 129, 246);
+}
+
+.Post_title {
+    width: 14vw;
+    height: fit-content;
+    text-align: center;
+    word-break: break-all;
+    font-size: 1.3vw;
+    align-self: center;
+    margin-bottom: 3vh;
+}
+
+.Post_title > a:hover {
+    color: rgb(147, 129, 246);
+}
+
+.Post_answer_count {
+    font-size: 1.3vw;
+    margin-bottom: 3vh;
+}
+
+.Post_answer_count > a:hover {
+    color: rgb(147, 129, 246);
+}
+
+.Post_tags {
+    font-size: 1vw;
+    display: flex;
+    flex-direction: row;
+
+    width: 13vw;
+    height: fit-content;
+}
+
+.Post_tags > ul {
+    width: 10vw;
+    padding: 0;
+    margin: 0 0 0 10px;
+    word-break: break-all;
+    text-align: left;
+    display: inline;
+}
+
+.Post_tags > ul > li {
+    display: inline;
+    margin-right: 7px;
+    padding: 0;
+}
+
+.Post_tag:hover {
+    color: rgb(147, 129, 246);
+    cursor: pointer;
+}

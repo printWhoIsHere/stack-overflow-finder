@@ -1,0 +1,22 @@
+.Result_page_wrapper {
+    width: 50vw;
+    height: fit-content;
+    margin-top: 1.5em;
+    background-color: rgba(50, 50, 50, 0.8);
+    border: 1px solid rgb(36, 36, 36, 0.5);
+    border-radius: .5em;
+    box-shadow: -5px 5px 5px rgb(36, 36, 36, 0.5);
+    padding: 15px;
+
+    display: grid;
+    grid-template-areas: 'a a a';
+    row-gap: 1vh;
+    column-gap: 1vw;
+    column-width: 1vw;
+
+    transition: .3s;
+}
+
+.Adaptive_wrapper {
+    display: flex;
+}

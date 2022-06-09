@@ -1,0 +1,33 @@
+.Error_message {
+    width: 50vw;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.Error_message > p {
+    margin: 1vh 0;
+}
+
+.Refresh_button {
+    width: 9vw;
+    height: 3vw;
+    font-size: 1vw;
+    border: 1px solid whitesmoke;
+    border-radius: .4em;
+    background-color: rgb(50, 50, 50, 0.5);
+    cursor: pointer;
+    color: whitesmoke;
+
+    transition: .3s;
+}
+
+.Refresh_button:hover {
+    background-color: rgb(36, 36, 36, 0.8);
+}
+
+.Refresh_button:active {
+    transition: 0s;
+    background-color: whitesmoke;
+    border: 1px solid inherit;
+    color: rgb(0, 0, 0);
+}

@@ -19,7 +19,7 @@ const App = () => {
         <div>
           <input className={Style.search_field} type='text' placeholder='Введите для поиска' onChange={labelChange} value={labelValue}/>
           <Link to={`/results`}>
-            <button className={Style.search_button} >
+            <button className={Style.search_button}>
               Поиск
             </button> 
           </Link>

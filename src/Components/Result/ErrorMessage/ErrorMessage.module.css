@@ -4,6 +4,10 @@
     font-size: 2vw;
 }
 
+.Error_message > p {
+    margin: 1vh 0;
+}
+
 .Refresh_button {
     width: 9vw;
     height: 3vw;

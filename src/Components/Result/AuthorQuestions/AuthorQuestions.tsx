@@ -8,18 +8,20 @@ const AuthorQuestions = ({ userId }: any) =>  {
   const authorQuestions = useStore($authorQuestionsStore);
   useEffect(() => {
     getAuthorQuestionsFx(userId);
-  }, [authorQuestions.items.length])
+  }, [])
 
   return (
     <div className={Style.Author_questions_wrapper}>
-
-        {/* <div className={Style.Question_post} key={question?.id}>
+      
+      {authorQuestions?.items.map((question: any) => (
+        <div className={Style.Question_post} key={question?.question_id}>
           <Link to={question?.link}>
-            <p className={Style.Post_title}>
-                {question?.title}
+            <p className={Style.Question_title}>
+              {question?.title}
             </p>
           </Link>
-        </div>     */}
+        </div>
+      ))}
 
     </div>
   )

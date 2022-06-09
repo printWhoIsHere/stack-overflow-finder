@@ -10,3 +10,15 @@
 
     transition: .5s;
 }
+
+.Tag_post {
+    background-color: rgb(36, 36, 36);
+    width: 6em;
+    height: 6em;
+    box-shadow: -5px 5px 5px rgb(36, 36, 36);
+}
+
+.Tag_post_title {
+    font-size: 1vw;
+    color: whitesmoke;
+}

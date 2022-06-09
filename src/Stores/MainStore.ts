@@ -16,7 +16,7 @@ export const $postStore = createStore<IData>({items: []})
 
 // Стор и эффект для популярных тегов (Получение данных о вопросах по тегу и заполнение их в стор)
 export const getPopularTagsFx = createEffect((tag: string) => 
-  fetch(`http://api.stackexchange.com/2.3/tags/${tag}/top-answerers/all_time?site=stackoverflow`)
+  fetch(`http://api.stackexchange.com/2.3/tags/${tag}/faq?site=stackoverflow`)
     .then(req => req.json()));
 export const $popularTagsStore = createStore<IData>({items: []})
   .on(getPopularTagsFx.doneData, (state, payload) => payload)

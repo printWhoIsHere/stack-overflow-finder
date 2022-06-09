@@ -4,7 +4,7 @@ import { $postStore, getSearchDataFx } from '../../Stores/MainStore';
 import $states from '../../Stores/StateStore';
 import AuthorQuestions from './AuthorQuestions/AuthorQuestions';
 import ErrorMessage from './ErrorMessage/ErrorMessage';
-import Loader from './Loader/Loader';
+import Loader from '../Loader/Loader';
 import PopularTags from './PopularTags/PopularTags';
 import Post from './Post/Post';
 import Style from './Result.module.css';

@@ -1,5 +1,5 @@
 import Result from "../Components/Result/Result";
 
-const ResultPage = ({searchValue}: any) => <Result searchValue={searchValue}/>
+const ResultPage = ({searchValue, setQuestionId}: any) => <Result setQuestionId={setQuestionId} searchValue={searchValue}/>
 
 export default ResultPage;

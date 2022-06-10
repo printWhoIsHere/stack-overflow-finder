@@ -7,6 +7,7 @@ import PostInfoPage from '../../Pages/PostInfoPage';
 
 const App = () => {
   const [labelValue, setLabelValue] = useState('');
+  const [questionId, setQuestionId] = useState(null);
 
   const labelChange = (e: any) => {
     setLabelValue(e.target.value);
@@ -28,8 +29,8 @@ const App = () => {
       
       <Routes>
         <Route path='/' element={<StartPage />} />
-        <Route path='/results' element={<ResultPage searchValue={labelValue} />} />
-        <Route path='/post-info' element={<PostInfoPage />} />
+        <Route path='/results' element={<ResultPage setQuestionId={setQuestionId} searchValue={labelValue} />} />
+        <Route path='/post-info' element={<PostInfoPage questionId={questionId}/>} />
       </Routes>
 
     </div>

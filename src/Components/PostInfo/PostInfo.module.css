@@ -1,26 +1,39 @@
 .Post_info_wrapper {
     width: 65vw;
     height: fit-content;
+    max-height: 80vh;
     margin-top: 1.5em;
     background-color: rgb(50, 50, 50, 0.8);
     border: 1px solid rgb(36, 36, 36, 0.5);
     border-radius: .5em;
     box-shadow: -5px 5px 5px rgb(36, 36, 36, 0.5);
     padding: 15px;
+    overflow-y: scroll;
 
     display: grid;
-    grid-template-areas: 'a a a a a';
+    grid-template-areas: 'a a a';
     row-gap: 1vh;
 
     transition: .3s;
 }
 
+.Post_info_wrapper::-webkit-scrollbar {
+    background-color: none;
+    border: none;
+}
+
+.Post_info_wrapper::-webkit-scrollbar-thumb {
+    border: 1px solid rgb(245, 245, 245, 0.5);
+    width: .5em;
+
+}
+
 .Answer {
-    width: 9vw;
-    height: 11vw;
+    width: 15vw;
+    height: 17vw;
     background-color: rgb(245, 245, 245, 0.2);
-    border: 1px solid rgb(36, 36, 36, 0.5);
-    box-shadow: -5px 5px 5px rgb(36, 36, 36, 0.5);
+    border: 1px solid rgb(36, 36, 36, 0.2);
+    box-shadow: -5px 5px 5px rgb(36, 36, 36, 0.2);
     border-radius: 1em;
     overflow: hidden;
 
@@ -30,19 +43,22 @@
     margin: 1vh auto;
 
     transition: .3s;
+    display: flex;
+    align-items: center;
 }
 
 .Answer:hover {
-    background-color: rgb(90, 90, 90, 0.5);
+    background-color: rgb(120, 120, 120, 0.2);
 }
 
 .p1 {
-    margin: 0;
-    font-size: 1.25em;
+    font-size: 4.5em;
+    color: red;
+    transform: rotate(45deg);
 }
 
-.Loader {
-    width: 65vw;
+.No_answers_msg {
+    width: 60vw;
     text-align: center;
     font-size: 3vw;
 }

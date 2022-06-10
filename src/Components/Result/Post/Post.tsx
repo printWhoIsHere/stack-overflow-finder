@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { showAuthorQuestions as authorQuestions, showPopularTags as popularTags } from "../../../Stores/StateStore";
 import Style from "./Post.module.css";
 
-const Post = ({ post, forceUpdate, setUserId, setCurrentTag }: any) => {
+const Post = ({ post, forceUpdate, setUserId, setTag, setQuestionId }: any) => {
   const showAuthorQuestions = useEvent(authorQuestions);
   const showPopularTags = useEvent(popularTags);
 
   return (
-    <div className={Style.Post_wrapper} key={post?.id} >
+    <div className={Style.Post_wrapper} key={post?.question_id} >
       <div className={Style.Post_author} onClick={() => setUserId(post?.owner.user_id)}>
         <div className={Style.Author_avatar}><img src={post?.owner.profile_image} /></div>
         <div className={Style.Author_name} onClick={forceUpdate}>
@@ -18,13 +18,13 @@ const Post = ({ post, forceUpdate, setUserId, setCurrentTag }: any) => {
         </div>
       </div>
       
-      <div className={Style.Post_title}>
+      <div className={Style.Post_title} onClick={() => setQuestionId(post?.question_id)}>
         <Link to='/post-info' >
           {post?.title}
         </Link>
       </div>
       
-      <div className={Style.Post_answer_count}>
+      <div className={Style.Post_answer_count} onClick={() => setQuestionId(post?.question_id)}>
         <Link to='/post-info' >
         {
           post?.answer_count === 0 ? 'Нет ответов' :
@@ -39,7 +39,7 @@ const Post = ({ post, forceUpdate, setUserId, setCurrentTag }: any) => {
         Теги:
           <ul onClick={showPopularTags}>
             {post?.tags?.map((tag: any) => (
-              <li className={Style.Post_tag} onClick={setCurrentTag(tag)} >
+              <li className={Style.Post_tag} onClick={setTag((tag: any) => tag)} >
                 {tag}
               </li>
             ))}

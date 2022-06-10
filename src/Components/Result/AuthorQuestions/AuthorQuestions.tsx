@@ -1,8 +1,7 @@
 import { useStore } from 'effector-react';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { $authorQuestionsStore, getAuthorQuestionsFx } from '../../../Stores/MainStore';
-import Style from './AuthorQuestions.module.css';
+import Style from '../../../Styles/MainStyle.module.css';
 
 const AuthorQuestions = ({ userId }: any) =>  {
   const authorQuestions = useStore($authorQuestionsStore);
@@ -11,15 +10,15 @@ const AuthorQuestions = ({ userId }: any) =>  {
   }, [])
 
   return (
-    <div className={Style.Author_questions_wrapper}>
+    <div className={Style.Wrapper}>
       
       {authorQuestions?.items.map((question: any) => (
-        <div className={Style.Question_post} key={question?.question_id}>
-          <Link to={question?.link}>
-            <p className={Style.Question_title}>
+        <div className={Style.Post} key={question?.question_id}>
+          <a href={question?.link} target='_blank'>
+            <p className={Style.Post_title}>
               {question?.title}
             </p>
-          </Link>
+          </a>
         </div>
       ))}
 

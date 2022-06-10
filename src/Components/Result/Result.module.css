@@ -1,12 +1,14 @@
 .Result_page_wrapper {
-    width: 50vw;
+    width: 55vw;
     height: fit-content;
+    max-height: 80vh;
     margin-top: 1.5em;
     background-color: rgba(50, 50, 50, 0.8);
     border: 1px solid rgb(36, 36, 36, 0.5);
     border-radius: .5em;
     box-shadow: -5px 5px 5px rgb(36, 36, 36, 0.5);
     padding: 15px;
+    overflow-y: scroll;
 
     display: grid;
     grid-template-areas: 'a a a';
@@ -15,6 +17,17 @@
     column-width: 1vw;
 
     transition: .3s;
+}
+
+.Result_page_wrapper::-webkit-scrollbar {
+    background-color: none;
+    border: none;
+}
+
+.Result_page_wrapper::-webkit-scrollbar-thumb {
+    border: 1px solid rgb(245, 245, 245, 0.8);
+    width: .5em;
+    border-radius: .5em;
 }
 
 .Adaptive_wrapper {

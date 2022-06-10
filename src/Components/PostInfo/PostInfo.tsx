@@ -1,47 +1,33 @@
-import { useState } from 'react';
+import { useStore } from 'effector-react';
+import { useEffect, useState } from 'react';
+import { $detailPostsStore, getDetailPostsFx } from '../../Stores/MainStore';
+import Loader from '../Loader/Loader';
 import Style from './PostInfo.module.css';
 
-const PostInfo = () => {
-  const [ isLoaded ] = useState(true);
-  const answers = [
-    {
-      title: 'Какой-то неимоверно огромный ответ, на написание которого по-любому ушло много времени, но мне он нужен чисто проверки ради',
-      id: 1
-    },
-    {
-      title: 'Ответ',
-      id: 2
-    },
-    {
-      title: 'Ответ',
-      id: 3
-    },
-    {
-      title: 'Ответ',
-      id: 4
-    },
-    {
-      title: 'Ответ',
-      id: 5
-    },
-    {
-      title: 'Ответ',
-      id: 6
-    },
-    {
-      title: 'Ответ',
-      id: 7
-    },
-  ]
+const PostInfo = ({ questionId }: any) => {
+  const answers = useStore($detailPostsStore);
+  const [isLoaded] = useState(answers?.items ? true : false);
+  const [isDone] = useState(answers?.items.length > 0 ? true : false);
+  
+  useEffect(() => {
+    getDetailPostsFx(questionId);
+  }, [isDone]);
   return (
-    <div className={Style.Post_info_wrapper}>
-      {isLoaded ? answers?.map(answer => (
-        <div key={answer?.id} className={Style.Answer}>
-          <p className={Style.p1}>{answer?.title}</p>
-        </div>
-      )) : (
-        <div className={Style.Loader}>Загрузка...</div>
-      )}
+    <div className={Style.Post_info_wrapper} >
+
+        {!isLoaded ? <Loader /> :
+          answers?.items.length === 0 ? (
+            <div className={Style.No_answers_msg}>На этот вопрос ещё не дали ответ</div>
+          ) : 
+            answers?.items?.map((answer: any) => (
+              <div key={answer?.id} className={Style.Answer}>
+                <p className={Style.p1}>
+                  ERROR
+                </p>
+              </div>
+            )
+          )
+        }
     </div>
   )
 };

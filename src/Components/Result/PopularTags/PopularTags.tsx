@@ -6,19 +6,20 @@ import Style from '../../../Styles/MainStyle.module.css';
 
 const PopularTags = ({ tag }: any) => {
   const popularTags = useStore($popularTagsStore);
-  const [ isLoading ] = useState(getPopularTagsFx.pending);
+  const [ isLoading ] = useState(popularTags.items ? false : true);
+  const [ isDone ] = useState(popularTags?.items.length > 0 ? true : false);
   useEffect(() => {
     getPopularTagsFx(tag);
-  }, [isLoading])
+  }, [isDone])
 
   return (
     <div className={Style.Wrapper}>
 
       {popularTags?.items?.map((tag: any) => (
         <div className={Style.Post}>
-          <Link to={tag?.link}>
+          <a href={tag?.link} target='_blank'>
             <p className={Style.Post_title}>{tag?.title}</p>
-          </Link>
+          </a>
         </div>
       ))}
       

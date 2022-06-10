@@ -4,6 +4,9 @@
     font-size: 2vw;
 }
 
+.Error_message::-webkit-scrollbar {
+    width: 0px;
+}
 
 .Error_message > p {
     margin: 1vh 0;

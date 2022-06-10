@@ -9,7 +9,7 @@ import PopularTags from './PopularTags/PopularTags';
 import Post from './Post/Post';
 import Style from './Result.module.css';
 
-const Result = ({searchValue}: any) => {
+const Result = ({searchValue, setQuestionId}: any) => {
   const searchResults = useStore($postStore);
   const states = useStore($states);
   const [ isLoaded, setIsLoaded ] = useState(false);
@@ -19,9 +19,10 @@ const Result = ({searchValue}: any) => {
   const [tag, setTag] = useState('');
   
   useEffect(() => {
-    getSearchDataFx(searchValue).then(() => {
-      if (searchResults.items) {
+    getSearchDataFx(searchValue).finally(() => {
+      if (searchResults.items && searchResults.items.length > 0) {
         setIsLoaded(true);
+        console.log(searchResults)
         setIsDone(true);
       }
       else {
@@ -29,21 +30,24 @@ const Result = ({searchValue}: any) => {
         setIsDone(false);
       }
     })
-  }, [forceUpdate]);
+  }, [isDone]);
 
   return (
     <div className={Style.Adaptive_wrapper}>
       <div className={Style.Result_page_wrapper}>
         {!isLoaded ? <Loader /> :
-          isDone ? searchResults?.items?.map((post: any) => ( 
-            <div key={post?.creation_date}>
-              <Post 
-                post={post} 
-                forceUpdate={forceUpdate}
-                setUserId={setUserId}
-                setTag={setTag}/>
+          !isDone ? <ErrorMessage /> : 
+            searchResults?.items?.map((post: any) => ( 
+              <div key={post?.creation_date} >
+                <Post 
+                  post={post} 
+                  forceUpdate={forceUpdate}
+                  setUserId={setUserId}
+                  setTag={setTag}
+                  setQuestionId={setQuestionId}/>
               </div> 
-              )) : <ErrorMessage forceUpdate={forceUpdate}/>}
+              )
+            )}
       </div>
       {states?.isActiveAuthorQuestions ? <AuthorQuestions userId={userId}/> : states?.isActivePopularTags ? <PopularTags tag={tag}/> : null}
     </div>

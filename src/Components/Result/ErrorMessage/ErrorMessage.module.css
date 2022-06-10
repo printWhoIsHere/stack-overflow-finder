@@ -1,8 +1,9 @@
 .Error_message {
-    width: 50vw;
+    width: 55vw;
     text-align: center;
     font-size: 2vw;
 }
+
 
 .Error_message > p {
     margin: 1vh 0;

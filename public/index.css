@@ -5,6 +5,10 @@ body {
     background-image: url(banana.png);
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
 * {
     color: whitesmoke;
     font-family: 'Gill Sans MT';

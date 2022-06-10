@@ -20,8 +20,9 @@ const Result = ({searchValue, setQuestionId}: any) => {
   
   useEffect(() => {
     getSearchDataFx(searchValue).finally(() => {
-      if (searchResults.items) {
+      if (searchResults.items && searchResults.items.length > 0) {
         setIsLoaded(true);
+        console.log(searchResults)
         setIsDone(true);
       }
       else {

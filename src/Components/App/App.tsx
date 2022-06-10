@@ -1,9 +1,9 @@
 import Style from './App.module.css';
-import ResultPage from '../../Pages/ResultPage';
 import { Routes, Route, Link } from 'react-router-dom';
-import StartPage from '../../Pages/StartPage';
 import { useState } from 'react';
-import PostInfoPage from '../../Pages/PostInfoPage';
+import Start from '../Start/Start';
+import Result from '../Result/Result';
+import PostInfo from '../PostInfo/PostInfo';
 
 const App = () => {
   const [labelValue, setLabelValue] = useState('');
@@ -28,9 +28,9 @@ const App = () => {
       </div>
       
       <Routes>
-        <Route path='/' element={<StartPage />} />
-        <Route path='/results' element={<ResultPage setQuestionId={setQuestionId} searchValue={labelValue} />} />
-        <Route path='/post-info' element={<PostInfoPage questionId={questionId}/>} />
+        <Route path='/' element={<Start />} />
+        <Route path='/results' element={<Result setQuestionId={setQuestionId} searchValue={labelValue} />} />
+        <Route path='/post-info' element={<PostInfo questionId={questionId}/>} />
       </Routes>
 
     </div>

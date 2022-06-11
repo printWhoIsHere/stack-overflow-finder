@@ -10,9 +10,8 @@
     padding: 15px;
     overflow-y: scroll;
 
-    display: grid;
-    grid-template-areas: 'a a a';
-    row-gap: 1vh;
+    display: flex;
+    justify-content: space-evenly;
 
     transition: .3s;
 }
@@ -37,7 +36,6 @@
     border-radius: 1em;
     overflow: hidden;
 
-    grid-area: 'a';
     text-align: center;
     padding: 1vh;
     margin: 1vh auto;
@@ -45,16 +43,26 @@
     transition: .3s;
     display: flex;
     align-items: center;
+    user-select: none;
 }
 
 .Answer:hover {
     background-color: rgb(120, 120, 120, 0.2);
+    color: rgb(255, 0, 255);
+}
+
+.Answer:hover > .p1 {
+    color:rgb(36, 36, 36, 0.2)
 }
 
 .p1 {
+    width: 100%;
+    height: fit-content;
     font-size: 4vw;
-    color: red;
+    color: rgb(255, 0, 0);
     transform: rotate(45deg);
+
+    transition: .3s;
 }
 
 .No_answers_msg {

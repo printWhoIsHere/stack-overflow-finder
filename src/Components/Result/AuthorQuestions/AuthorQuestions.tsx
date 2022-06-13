@@ -13,13 +13,13 @@ const AuthorQuestions = ({ userId }: any) =>  {
     <div className={Style.Wrapper}>
       
       {authorQuestions?.items.map((question: any) => (
-        <div className={Style.Post} key={question?.question_id}>
-          <a href={question?.link} target='_blank'>
-            <p className={Style.Post_title}>
-              {question?.title}
-            </p>
-          </a>
-        </div>
+        <a href={question?.link} target='_blank'>
+          <div className={Style.Post} key={question?.question_id}>
+              <p className={Style.Post_title}>
+                {question?.title}
+              </p>
+          </div>
+        </a>
       ))}
 
     </div>

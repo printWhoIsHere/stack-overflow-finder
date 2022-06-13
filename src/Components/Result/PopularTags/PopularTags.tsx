@@ -15,13 +15,13 @@ const PopularTags = ({ tag }: any) => {
     <div className={Style.Wrapper}>
 
       {popularTags?.items?.map((tag: any) => (
-        <div className={Style.Post}>
-          <Link to={tag?.link}>
-            <p className={Style.Post_title}>{tag?.title}</p>
-          </Link>
-        </div>
+        <a href={tag?.link} target='_blank'>
+          <div className={Style.Post}>
+              <p className={Style.Post_title}>{tag?.title}</p>
+          </div>
+        </a>
       ))}
-      
+
     </div>
   );
 };

@@ -39,7 +39,7 @@ const Post = ({ post, forceUpdate, setUserId, setTag, setQuestionId }: any) => {
         Теги:
           <ul onClick={showPopularTags}>
             {post?.tags?.map((tag: any) => (
-              <li className={Style.Post_tag} onClick={setTag((tag: any) => tag)} >
+              <li className={Style.Post_tag} onClick={() => setTag(tag)} >
                 {tag}
               </li>
             ))}

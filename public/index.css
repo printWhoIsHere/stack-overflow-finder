@@ -13,3 +13,26 @@ body::-webkit-scrollbar {
     color: whitesmoke;
     font-family: 'Gill Sans MT';
 }
+
+.smthng {
+    width: 5px;
+    height: 5px;
+    animation: change 1s infinite;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+@keyframes change {
+    0%,100% {
+        background-color: red;
+    }
+    33% {
+        background-color: green;
+    }
+    66% {
+        background-color: blue;
+    }
+}

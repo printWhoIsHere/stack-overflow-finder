@@ -14,14 +14,16 @@ const Result = ({searchValue, setQuestionId}: any) => {
   const states = useStore($states);
   const [ isLoaded, setIsLoaded ] = useState(false);
   const [isDone, setIsDone] = useState(false);
+  const isLoading = useStore(getSearchDataFx.pending);
   const [, forceUpdate] = useState();
   const [userId, setUserId] = useState(0);
   const [tag, setTag] = useState('');
   
   useEffect(() => {
     getSearchDataFx(searchValue).finally(() => {
-      if (searchResults.items) {
+      if (searchResults.items && searchResults.items.length > 0) {
         setIsLoaded(true);
+        console.log(searchResults)
         setIsDone(true);
       }
       else {

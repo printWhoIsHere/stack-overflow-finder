@@ -1,7 +1,11 @@
 .Error_message {
-    width: 50vw;
+    width: 55vw;
     text-align: center;
     font-size: 2vw;
+}
+
+.Error_message::-webkit-scrollbar {
+    width: 0px;
 }
 
 .Error_message > p {
